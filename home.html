@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diving center</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class=" navbar-container">
+        <div class="navbar">
+            <div class="navbar-section">
+                <div class="contact-info">
+                    <li><strong>Call us:</strong> <a>+9847943999</a></li>
+                    <li><a>info@demolink.org</a></li>
+                </div>
+                <div class="name-info">
+                    <img src="images/logo-inverse-119x43.png">
+                </div>
+                <div class="search-info">
+                    <i class="fa fa-search" style="font-size:20px; cursor: pointer; display: block;" onclick="change(this)" id="searchicon"></i>
+                    <div class="lang" onclick="openlang()">en</div>
+                </div>
+                <ul class="languages">
+                     <li class="default active">en</li>
+                     <li class="default">fr</li>
+                     <li class="default">es</li>
+                </ul>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>HOME</li>
+                    <li class="pages">PAGES
+                        <ul id="pages-menu">
+                            <li>ABOUT US</li>
+                            <li>WHAT WE OFFER</li>
+                            <li>OUR TEAM</li>
+                            <li>TESTMONIALS</li>
+                            <li>PRICING LIST</li>
+                        </ul>
+                    </li>
+                    <li class="blog">BLOG
+                        <ul id="blog-menu">
+                            <li>GRID BLOG</li>
+                            <li>BLOG LIST</li>
+                            <li>BLOG POST</li>
+                        </ul>
+                    </li>
+                    <li class="gallery">GALERY
+                        <ul id="gallery-menu">
+                            <li>GRID GALLERY</li>
+                            <li>GRID FULLWIDTH GALLERY</li>
+                            <li>MASONRY GALLERY</li>
+                            <li>MASONRY FULLWIDTH GALLERY</li>
+                        </ul>
+                    </li>
+                    <li class="element">ELEMENTS
+                        <div id="element-menu">
+                                <div class="elements-menu">
+                                   <div class="elements-menu-header">
+                                      <i class="fa fa-th" area-hidden="true" style="font-size:20px; color: blue; margin-right: 10px;"></i>
+                                      <h3>ELEMENTS</h3>
+                                   </div>
+                                   <div class="elements-menu-list">
+                                        <ul id="col1">
+                                         <li>TYPOGRAPHY</li>
+                                         <li>ICONS LIST</li>
+                                         <li>PROGRESS BARS</li>
+                                         <li>CALLS TO ACTION</li>
+                                         <li>TABS & ACCORDIANS</li>
+                                        </ul>
+                                        <ul id="col2">
+                                         <li>BUTTON</li>
+                                         <li>FORMS</li>
+                                         <li>TABLES</li>
+                                         <li>COUNTERS</li>
+                                         <li>GRID SYSTEM</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            
+                               <div class="additional-pages">
+                                   <div class="additional-pages-header">
+                                    <i class="fas fa-layer-group" style="font-size:20px;color: blue; margin-right: 10px;"></i>
+                                    <h3>ADDITIONAL PAGES</h3>
+                                   </div>
+                                   <div class="additional-pages-list">
+                                      <ul id="col3">
+                                        <li>404 PAGE</li>
+                                        <li>COMING SOON</li>
+                                        <li>PRIVACY POLICY</li>
+                                        <li>SEARCH RESULTS</li>
+                                      </ul>
+                                   </div>
+                                </div>
+                        </div>
+                    </li>
+                    <li>CONTACTS</li>
+                </ul>
+            </div>
+            <div class="btn active" id="prev-button" onclick="prev()">
+                <button>prev</button>
+            </div>
+            <div class="btn" id="next-button" onclick="next()">
+                <button>next</button>
+            </div>
+        </div>
+        <div class="navbar-container-wrap">
+            <div class="wrap-background">
+                <div class="slide active" id="slider1">
+                    <div class="slider-content">
+                       <h1>Enjoy Scuba<br>
+                        Diving With Us</h1>
+                       <h6>We offer a wide variety of scuba diving tours<br> and locations for everyone</h6>
+                        <button>READ MORE</button>
+                    </div>
+                </div>
+                <div class="slide" id="slider2">
+                    <div class="slider-content">
+                        <h1>Best Equipment<br>
+                            and Instructors</h1>
+                        <h6>Our team and the top-notch equipment<br> guarantee unforgettable diving.</h6>
+                         <button>READ MORE</button>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-overlay">
+            <div class="search-container">
+                <input placeholder="Search...">
+                <i class="fa fa-search"></i>
+            </div>
+            
+            <i class="fa fa-close" onclick="closeoverlay()" ></i>
+        </div>
+    </div>
+    <div class="destinations">
+        <div class="destinations-container">
+            <div class="destinations-header">
+                 <h2>Destinations</h2>
+            </div>
+            <div class="destinations-cards">
+                <div class="destinations-card">
+                    <div class="desti-card-head">
+                        <img src="images/desti 1.jpg">
+                    </div>
+                    <div class="desti-card-body">
+                        <h2>Maldives</h2>
+                    <p>True abundance of marine life</p>
+                    <button>BOOK NOW</button>
+                    </div>    
+                </div>
+                <div class="destinations-card">
+                    <div class="desti-card-head">
+                        <img src="images/desti 2.jpg">
+                    </div>
+                    <div class="desti-card-body">
+                        <h2>Indonesia</h2>
+                        <p>Unique marine diversity</p>
+                        <button>BOOK NOW</button>
+                    </div>    
+                </div>
+                <div class="destinations-card">
+                    <div class="desti-card-head">
+                       <img src="images/desti 3.jpg">
+                    </div>
+                    <div class="desti-card-body">
+                        <h2>Australia</h2>
+                    <p>The world’s top scuba destination</p>
+                    <button>BOOK NOW</button>
+                    </div>     
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=section>
+        <div class="section-container">
+            <div class="section-col">
+               <div class="section-box up">
+                  <div class="section-content">
+                     <h3>Best Equipment</h3>
+                      <p>Our agency provides  first-class equipment for all our clients, regardless of their level.</p>
+                   </div>
+                   <div class="section-logo">
+                      <img src="images/index-icon-1-77x79.png">
+                   </div>
+                </div>
+                <div class="section-box down">
+                    <div class="section-content">
+                      <h3>100% Safety</h3>
+                      <p>We offer a variety of destinations including the most exotic ones located all over the world.</p>
+                    </div>
+                   <div class="section-logo">
+                      <img src="images/index-icon-2-77x79.png">
+                    </div>
+                </div>
+            </div>
+            <div class="section-col right">
+                <div class="section-box up">
+                    <div class="section-logo">
+                        <img src="images/index-icon-3-77x79.png">
+                     </div>
+                    <div class="section-content">
+                       <h3>Exciting Places</h3>
+                       <p>We pay a lot of attention to divers’ safety at all times, as there’s always some risk involved in it.</p>  
+                    </div>
+                    
+                </div>
+                <div class="section-box down">
+                    <div class="section-logo">
+                        <img src="images/index-icon-4-77x79.png">
+                    </div>
+                    <div class="section-content">
+                        <h3>Instructors</h3>
+                        <p>We are a team of talented and experienced diving instructors always ready to help you.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="counter">
+        <div class="counter-section">
+            <div class="clients">
+               <h1></h1>
+               <hr>
+               <p>Monthly<br>clients</p>
+            </div>
+            <div class="offers">
+                <h1></h1>
+               <hr>
+               <p>Special<br>offers</p>
+            </div>
+            <div class="reviews">
+                <h1></h1>
+               <hr>
+               <p>Positive<br>reviews</p>
+            </div>
+            <div class="partners">
+                <h1></h1>
+               <hr>
+               <p>Partners throughout<br>the USA</p>
+            </div>
+        </div>
+    </div>
+    <div class="divers">
+        <div class="divers-section">
+            <div class="divers-image-section">
+               <div class="divers-images">
+                     <img class="divers-img active" id=img1 src="images/product-big-1-543x558 (1).png">
+                     <img class="divers-img" id= img2 src="images/product-big-2-543x558.png">
+                     <img class="divers-img" id=img3 src="images/product-big-3-543x558.png">
+               </div>
+               <div class="divers-buttons">
+                    <button  class="radio-btn" onclick="first()" id="btn1">
+                    <button  class="radio-btn" onclick="second()" id="btn2">
+                    <button  class="radio-btn" onclick="third()" id="btn3">
+               </div>
+            </div>
+            <div class="divers-panels">
+                <div class="panels-header">
+                    <h1>Why Choose Divers</h1>
+                </div>
+                <div class="panels-list">
+                    <div class="panel">
+                    <div class="panel-list-head">
+                        <img class="image" src="images/greater-than.png ">
+                        <h3>20+ years of Experience in Diving</h3>
+                    </div>
+                    <div class="panel-list-body">
+                        <p>Our instructors have more than 20 years of experience in diving. It makes us the #1 choice among travelers who are looking for unforgettable and 100% safe diving experience with advice from the best divers.</p>
+                    </div>
+                    </div>
+
+                    <div class="panel">
+                    <div class="panel-list-head">
+                        <img class="image" src="images/greater-than.png ">
+                        <h3>Carefully Choosen Team of Instructors</h3>
+                    </div>
+                    <div class="panel-list-body">
+                        <p>Our experienced team of Diving Professionals all have over 15 years of diving experience and have been professionally certified. Our team includes the most experienced SSI instructors in the world who are always happy to help you.</p>
+                    </div>
+                    </div>
+
+                    <div class="panel">
+                    <div class="panel-list-head">
+                        <img class="image" src="images/greater-than.png ">
+                        <h3>Affordable Prices</h3>
+                    </div>
+                    <div class="panel-list-body">
+                        <p>Divers Center has an affordable pricing policy that allows us to offer the best diving tours and services at reasonable prices. This is one of many reasons why divers from all over US choose our center to dive & travel while also saving a lot of money.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="features">
+        <div class="features-section">
+            <div class="feature">
+                <div class="feature-img">
+                    <img src="images/index-icon-1-52x54.png">
+                </div>
+                <div class="feature-body">
+                    <h2>Different Locations</h2>
+                    <p>A wide variety of destinations</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-img">
+                    <img src="images/index-icon-2-52x55.png">
+                </div>
+                <div class="feature-body">
+                    <h2>Free Transfer</h2>
+                    <p>We offer free transfer to Divers</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-img">
+                    <img src="images/index-icon-3-54x54.png">
+                </div>
+                <div class="feature-body">
+                    <h2>Online Payments</h2>
+                    <p>Pay for any diving tour online</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <div class="testimonials-section">
+            <div class="testimonials-header">
+                <h3>Testimonials</h3>
+            </div>
+            <div class="testimonials-body">
+                <div class="testimonials-sliders">
+                    <div class="testimonials-slide active">
+                        <p>I had a fantastic weekend at Stoney Cove with your team. Great people who made my wife (Lisa) and I feel very welcome. Thanks for all your help and support with the diving!</p>
+                    </div>
+                    <div class="testimonials-slide">
+                        <p>What a fantastic weekend spent with the amazingly friendly team at Divers! You made us feel very welcome and you all were amazing. Thank you!</p>
+                    </div>
+                    <div class="testimonials-slide">
+                        <p>It was a great first time dive, the team was very friendly and attentive I will have no hesitation going again and recommending you to all my friends and colleagues.</p>
+                    </div>
+                </div>
+                <div class="testimonials-users">
+                    <div class="user active">
+                       <img src="images/user-7-87x87.jpg">
+                       <h5>PATRICK GOODMAN</h5>
+                       <p>Client</p>
+                    </div>
+                    <div class="user">
+                       <img src="images/user-8-87x87.jpg">
+                       <h5>KATE SMITH</h5>
+                       <p>Client</p>
+                    </div>
+                    <div class="user">
+                        <img src="images/user-9-87x87.jpg">
+                        <h5>SAM WILSON</h5>
+                        <p>Client</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="gallery-section">
+            <h1>GALLERY</h1>
+            <div class="gallery-images">
+                <div class="gallery-container" id="gal1">
+                    <img src="images/masonry-gallery-1-270x250.jpg">
+                    <div class="gal-overlay">
+                        <h5>Barracuda Point</h5>
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="gallery-container" id="gal2">
+                    <img src="images/masonry-gallery-2-270x530.jpg">
+                    <div class="gal-overlay">
+                        <h5>Blue Corner Wall</h5>
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="gallery-container" id="gal3">
+                    <img src="images/masonry-gallery-3-270x250.jpg">
+                    <div class="gal-overlay">
+                        <h5>The Yongala</h5>
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="gallery-container" id="gal4">
+                    <img src="images/masonry-gallery-4-270x250.jpg">
+                    <div class="gal-overlay">
+                        <h5>Thistlegorm</h5>
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="gallery-container" id="gal5">
+                    <img src="images/masonry-gallery-5-270x250.jpg">
+                    <div class="gal-overlay">
+                        <h5>Shark and Yolanda Reef</h5>
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="gallery-container" id="gal6">
+                    <img src="images/masonry-gallery-6-570x530.jpg">
+                    <div class="gal-overlay">
+                        <h5>Manta Ray Night Dive</h5>
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+                <div class="gallery-container" id="gal7">
+                    <img src="images/masonry-gallery-7-570x250.jpg">
+                    <div class="gal-overlay">
+                        <h5>Great Blue Hole</h5>
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="news">
+        <div class="news-section">
+            <div class="news-col1">
+                <h1>Newsletter</h1>
+                <p>Subscribe to our newsletter</p>
+            </div>
+            <div class="news-col2">
+                <input placeholder="Enter your e-mail address" id="email" required>
+                <label for="email">This text feild is required</label>
+            </div>
+            <div class="news-col3">
+                <button>SUBSCRIBE</button>
+            </div>
+        </div>
+    </div>
+    <div class="instructors">
+        <div class="instructors-section">
+            <div class="instructor-head">
+                <h1>Instructors</h1>
+            </div>
+            <div class="instructor-body">
+                <div class="instructor">
+                    <div class="instructor-img">
+                        <img src="images/team-4-270x227.jpg">
+                    </div>
+                    <div class="instructor-content">
+                        <h5>Peter Matrinez</h5>
+                        <p>Peter is PADI Course Director and our company’s Founder</p>
+                        <ul>
+                           <i class="fab fa-facebook"></i>
+                           <i class="fab fa-twitter"></i>
+                           <i class="fab fa-instagram"></i>
+                           <i class="fab fa-google"></i>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="instructor">
+                    <div class="instructor-img">
+                        <img src="images/team-5-270x227.jpg">
+                    </div>
+                    <div class="instructor-content">
+                        <h5>Jane McMillan</h5>
+                        <p>Jane is Divers’s Specialty Instructor Trainer who joined us in 2010.</p>
+                        <ul>
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-google"></i>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="instructor">
+                    <div class="instructor-img">
+                        <img src="images/team-6-270x227.jpg">
+                    </div>
+                    <div class="instructor-content">
+                        <h5>John Smith</h5>
+                        <p>John has been working with us since day one as PADI Divemaster.</p>
+                        <ul>
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-google"></i>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="instructor">
+                    <div class="instructor-img">
+                        <img src="images/team-7-270x227.jpg">
+                    </div>
+                    <div class="instructor-content">
+                        <h5>Sam Williams</h5>
+                        <p>Sam is Divers’s PADI Open Water Scuba Instructor.</p>
+                        <ul>
+                            <i class="fab fa-facebook"></i>
+                           <i class="fab fa-twitter"></i>
+                           <i class="fab fa-instagram"></i>
+                           <i class="fab fa-google"></i>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blog">
+        <div class="blog-section">
+            <div class="blog-head">
+                <h1>Our Blogs</h1>
+            </div>
+            <div class="blog-body">
+                <div class="blogs">
+                    <div class="blog-img">
+                        <img src="images/post-1-370x239.jpg">
+                    </div>
+                    <div class="blog-content">
+                        <p>August 9,2021</p>
+                        <h5>New Caledonia:The <br>Lagoon of All Hopes</h5>
+                        <p>As we dived for the very first time in the <br> lagoon of New Caledonia, at Duck Island,<br> with only our masks and fins...</p>
+                    </div>
+                </div>
+
+                <div class="blogs">
+                    <div class="blog-img">
+                        <img src="images/post-2-370x239.jpg">
+                    </div>
+                    <div class="blog-content">
+                        <p>August 9,2021</p>
+                        <h5>Skuba Diving in Okinawa: A <br>First-timer Guide</h5>
+                        <p>It is one of these places where it is not so <br> straightforward to organize a scuba<br> diving trip. There are so many...</p>
+                    </div>
+                </div>
+
+                <div class="blogs">
+                    <div class="blog-img">
+                        <img src="images/post-3-370x239.jpg">
+                    </div>
+                    <div class="blog-content">
+                        <p>August 9,2021</p>
+                        <h5>Shore Diving in Maui & Big<br>Island</h5>
+                        <p>The Hawaiian Archipelago is full of <br>bucket list dives with exciting adventures<br> such as diving in the crater...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-section">
+        <div class="footer-top">
+            <div class="footer-col">
+                <div class="gallery">
+                    <div class="gallery-head" id="head">
+                        <h5>Gallery</h5>
+                    </div>
+                    <div class="gallery-body">
+                        <img src="images/masonry-gallery-6-570x530.jpg">
+                        <img src="images/masonry-gallery-4-270x250.jpg">
+                        <img src="images/post-1-370x239.jpg">
+                        <img src="images/masonry-gallery-7-570x250.jpg">
+                        <img src="images/post-2-370x239.jpg">
+                        <img src="images/masonry-gallery-3-270x250.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <div class="links">
+                    <div class="links-head" id="head">
+                        <h5>Quick Links</h5>
+                    </div>
+                    <div class="links-body">
+                        <div class="links-col">
+                            <ul>
+                                <li>About Us</li>
+                                <li>What We Offer</li>
+                                <li>FAQ</li>
+                                <li>Instructors</li>
+                            </ul>
+                        </div>
+                        <div class="links-col">
+                            <ul>
+                                <li>Contact Us</li>
+                                <li>Blog</li>
+                                <li>Gallery</li>
+                                <li>Pricing</li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>   
+            </div>
+            
+            <div class="footer-col">
+                    <div class="getintouch">
+                        <div class="getintouch-head" id="head">
+                           <h5>Get In Touch</h5>
+                        </div>
+                        <div class="getintouch-body">
+                            <table>
+                            <tr>
+                                <td><i class="fa fa-map-marker"></i></td>
+                                <td>523 Sylvan Ave,5th Floor<br>Mountain View,CA 94041 USA</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-phone"></i></td>
+                                <td>+(844)123 456 78</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-envelope"></i></td>
+                                <td>info@demolink.org </td>
+                            </tr>
+                            </table>
+                            <ul>
+                               <i class="fab fa-facebook"></i>
+                               <i class="fab fa-twitter"></i>
+                               <i class="fab fa-instagram"></i>
+                               <i class="fab fa-google"></i>
+                               <i class="fab fa-skype"></i>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="footer">
+             <p>©  2024 Divers.  All rights reserved. Privacy Policy.</p>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
